@@ -1,9 +1,12 @@
 <br />
-<span> valeur du compteur : </span>
+<!-- affichage de la propriété résultat qui a récupérer la valeur de result -->
+<span> valeur du compteur : {{resultat}} </span>
 <br />
 <br />
-<button> + </button>
+<!-- récupération de l'événement clic du bouton + et exécution de la fonction incrementer -->
+<button (click)="incrementer()"> + </button> 
 <br />
 <br />
-<button> - </button>
+<!-- récupération de l'événement clic du bouton - et exécution de la fonction decrementer -->
+<button (click)="decrementer()"> - </button>
 <br>
