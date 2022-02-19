@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-exercice2',
@@ -8,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class Exercice2Component implements OnInit {
   public valeur: string;
 
-  constructor() { }
+  @ViewChild('myinput') input: ElementRef<HTMLInputElement>;
+
+ constructor() {
+
+}
 
   ngOnInit() {
+  }
+
+  //Fonction exécutée lorsque l'événement d'écriture est détecté
+  myFunction(){
+    this.valeur = this.input.nativeElement.value; 
   }
 
 }
